@@ -72,8 +72,8 @@
                         <div class="d-flex flex-wrap align-items-center justify-content-end gap-2 mb-3">
                             <div>
                                 <ul class="nav nav-pills">
-                                    <li class="nav-item">
-                                        <a class="nav-link active" href="#" data-bs-toggle="tooltip" data-bs-placement="top" title="List"><i class="bx bx-list-ul"></i></a>
+                                    <li class="nav-item btn-custom">
+                                        <a class="nav-link" href="#" data-bs-toggle="tooltip" data-bs-placement="top" title="List"><i class="bx bx-list-ul" style="color: white;"></i></a>
                                     </li>
                                     <li class="nav-item">
                                         <a class="nav-link" href="#" data-bs-toggle="tooltip" data-bs-placement="top" title="Grid"><i class="bx bx-grid-alt"></i></a>
@@ -82,7 +82,7 @@
                             </div>
                             <!-- BUTTON ADD -->
                             <div>
-                                <a href="#" class="btn btn-light waves-effect waves-primary" data-bs-toggle="modal" data-bs-target="#exampleModal"><i class="bx bx-plus me-1"></i>Add New</a>
+                                <a href="#" class="btn btn-custom" data-bs-toggle="modal" data-bs-target="#exampleModal"><i class="bx bx-plus me-1"></i>Add New</a>
                             </div>
 
                             <!-- FORM MODAL INPUT DATA -->

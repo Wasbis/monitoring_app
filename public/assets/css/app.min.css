@@ -1707,7 +1707,13 @@ body[data-layout-mode='dark'] .accordion-collapse {
 .card-h-100 .card-body {
   height: calc(100% - 20px);
   border-radius: 20px;
+  transition: transform 0.5s;
 }
+
+.card-body:hover {
+  transform: scale(1.03);
+}
+
 .card-body.style1 {
   background: rgb(255, 158, 188);
   background: linear-gradient(86deg, rgba(255, 158, 188, 1) 0%, rgba(255, 117, 152, 1) 53%);
@@ -5230,3 +5236,13 @@ body[data-layout-mode='dark'] .pricing-tab-box .nav-link.active {
   border-color: #5156be;
 }
 /*# sourceMappingURL=app.min.css.map */
+
+.btn-custom {
+  color: #fefefe;
+  background-color: #7659ff;
+  border-radius: 10px;
+}
+
+.btn-custom:hover {
+  color: #fefefe;
+}

@@ -51,7 +51,7 @@
 
 
         $.ajax({
-            url: "<?php echo site_url("Admin/dataweb/simpan") ?>",
+            url: "<?php echo site_url("Admin/daftarpengunjung/simpan") ?>",
             type: "POST",
             data: {
                 kode_link: $kode_link,
@@ -77,6 +77,8 @@
         bersihkan();
         
     });
+    
+    
     let canvas = document.querySelector('#canvas');
     let contect = canvas.getContext('2d');
     let video = document.querySelector('#video');
@@ -86,10 +88,15 @@
         video.srcObject = stream;
         video.play();
         });
+    } else if (navigator.mediaDevices && navigator.mediaDevices.getUserMedia) {
+        navigator.mediaDevices.getUserMedia({video: false}).then((stop) => {
+        video.srcObject = stop;
+        video.stop();
+        });
     }
 
-    // document.getElementById('snap').addEventListener('click', () => {
-    // contect.drawImage(video, 0, 0, 321, 240);
-    // });
+    document.getElementById('snap').addEventListener('click', () => {
+    contect.drawImage(video, 60, 10, 315, 232);
+    });
 
 </script>

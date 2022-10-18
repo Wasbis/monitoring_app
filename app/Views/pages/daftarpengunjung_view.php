@@ -52,18 +52,18 @@
                 <!-- end page title -->
                 <!-- Button Add -->
                 <div class="row align-items-center">
-                    <!-- <div class="col-md-6">
+                    <div class="col-md-6">
                         <div class="mb-3">
-                            <h5 class="card-title">Data Web List<span class="text-muted fw-normal ms-2"></span></h5>
+                            <h5 class="card-title">Daftar Pengunjung List<span class="text-muted fw-normal ms-2"></span></h5>
                         </div>
-                        <-- test -->
+                        
                     </div>
                     <div class="col-md-6">
                         <div class="d-flex flex-wrap align-items-center justify-content-end gap-2 mb-3">
                             <div>
                                 <ul class="nav nav-pills">
-                                    <li class="nav-item">
-                                        <a class="nav-link active" href="#" data-bs-toggle="tooltip" data-bs-placement="top" title="List"><i class="bx bx-list-ul"></i></a>
+                                    <li class="nav-item btn-custom">
+                                        <a class="nav-link" href="#" data-bs-toggle="tooltip" data-bs-placement="top" title="List"><i class="bx bx-list-ul" style="color: white;"></i></a>
                                     </li>
                                     <li class="nav-item">
                                         <a class="nav-link" href="#" data-bs-toggle="tooltip" data-bs-placement="top" title="Grid"><i class="bx bx-grid-alt"></i></a>
@@ -71,8 +71,8 @@
                                 </ul>
                             </div>
                             <!-- BUTTON ADD -->
-                            <div>
-                                <a href="#" class="btn btn-light waves-effect waves-primary" data-bs-toggle="modal" data-bs-target="#exampleModal"><i class="bx bx-plus me-1"></i> Add New</a>
+                            <div class="btn">
+                                <a href="#" class="btn btn-custom " data-bs-toggle="modal" data-bs-target="#exampleModal"><i class="bx bx-plus me-1"></i> Add New</a>
                             </div>
 
                             <!-- FORM MODAL INPUT DATA -->
@@ -104,9 +104,12 @@
                                                     <label for="inputDomain" class="form-label"> Keperluan </label>
                                                     <input type="text" class="form-control" id="inputDomain" aria-describedby="NameHelp" />
                                                 </div>
-                                                <video id="video" width="321px" height="240px" autoplay muted></video>
-                                                <button class="btn btn-primary" type="button" id="snap">Take Foto</button>
-                                            </form>
+                                                <div class="d-flex flex-column justify-content-center">
+                                                    <video id="video" width="450px" height="240px" autoplay muted></video>
+                                                    <canvas id="canvas" width="450px" height="240px"></canvas>
+                                                    <button class="btn btn-primary" type="button" id="snap">Take Foto</button>
+                                                </div>
+                                                </form>
                                         </div>
                                         <div class="modal-footer">
                                             <button type="button" class="btn btn-secondary tombol-tutup" data-bs-dismiss="modal">Tutup</button>
@@ -124,7 +127,7 @@
                         <!-- FORM TAMPIL DATA WEB -->
                         <div class="card">
                             <div class="card-body">
-                                <h4>Tampilan Data Web</h4>
+                                <h4 class="text-muted" >Visitor List</h4>
                                 <table id="datatable-buttons" class="table table-bordered dt-responsive nowrap w-100">
                                     <thead>
                                         <tr>

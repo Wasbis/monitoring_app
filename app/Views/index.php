@@ -31,7 +31,8 @@
                         <!-- card -->
                         <div class="card card-h-100">
                             <!-- card body -->
-                            <div class="style1 card-body"sty>
+                            <a href="dataweb">
+                            <div class="style1 card-body">
                                 <div class="row align-items-center">
                                     <div class="col-6">
                                         <span class="title-card text-white mb-3 d-block">Data Web</span>
@@ -48,6 +49,7 @@
                                     <span class="ms-1 text-white font-size-13">Since last week</span>
                                 </div>
                             </div><!-- end card body -->
+                            </a>
                         </div><!-- end card -->
                     </div><!-- end col -->
 
@@ -55,6 +57,7 @@
                         <!-- card -->
                         <div class="card card-h-100">
                             <!-- card body -->
+                            <a href="datakelola">
                             <div class="style2 card-body">
                                 <div class="row align-items-center">
                                     <div class="col-6">
@@ -72,6 +75,7 @@
                                     <span class="ms-1 text-white font-size-13">Since last week</span>
                                 </div>
                             </div><!-- end card body -->
+                            </a>
                         </div><!-- end card -->
                     </div><!-- end col-->
 
@@ -79,23 +83,25 @@
                         <!-- card -->
                         <div class="card card-h-100">
                             <!-- card body -->
-                            <div class="style3 card-body">
-                                <div class="row align-items-center">
-                                    <div class="col-6">
-                                        <span class="title-card text-white mb-3 d-block">Data Akun</span>
-                                        <h4 class="mb-3">
-                                            <span class="counter-value" data-target="4">0</span>
-                                        </h4>
+                            <a href="dataakun">
+                                <div class="style3 card-body">
+                                    <div class="row align-items-center">
+                                        <div class="col-6">
+                                            <span class="title-card text-white mb-3 d-block">Data Akun</span>
+                                            <h4 class="mb-3">
+                                                <span class="counter-value" data-target="4">0</span>
+                                            </h4>
+                                        </div>
+                                        <div class="col-6">
+                                            <div id="mini-chart3" data-colors='["#fefefe"]' class="apex-charts mb-2"></div>
+                                        </div>
                                     </div>
-                                    <div class="col-6">
-                                        <div id="mini-chart3" data-colors='["#fefefe"]' class="apex-charts mb-2"></div>
+                                    <div class="text-nowrap">
+                                        <span class="badge bg-success text-white">Active</span>
+                                        <span class="ms-1 text-white font-size-13">Since last week</span>
                                     </div>
-                                </div>
-                                <div class="text-nowrap">
-                                    <span class="badge bg-success text-white">Active</span>
-                                    <span class="ms-1 text-white font-size-13">Since last week</span>
-                                </div>
-                            </div><!-- end card body -->
+                                </div><!-- end card body -->
+                            </a>
                         </div><!-- end card -->
                     </div><!-- end col -->
 
@@ -103,23 +109,25 @@
                         <!-- card -->
                         <div class="card card-h-100">
                             <!-- card body -->
-                            <div class="style4 card-body">
-                                <div class="row align-items-center">
-                                    <div class="col-6">
-                                        <span class="title-card text-white mb-3 d-block">Pratinjau Web</span>
-                                        <h4 class="mb-3">
-                                            <span class="counter-value" data-target="66">0</span>
-                                        </h4>
+                            <a href="">
+                                <div class="style4 card-body">
+                                    <div class="row align-items-center">
+                                        <div class="col-6">
+                                            <span class="title-card text-white mb-3 d-block">Pratinjau Web</span>
+                                            <h4 class="mb-3">
+                                                <span class="counter-value" data-target="66">0</span>
+                                            </h4>
+                                        </div>
+                                        <div class="col-6">
+                                            <div id="mini-chart4" data-colors='["#fefefe"]' class="apex-charts mb-2"></div>
+                                        </div>
                                     </div>
-                                    <div class="col-6">
-                                        <div id="mini-chart4" data-colors='["#fefefe"]' class="apex-charts mb-2"></div>
+                                    <div class="text-nowrap">
+                                        <span class="badge bg-info text-white">Active</span>
+                                        <span class="ms-1 text-white font-size-13">Since last week</span>
                                     </div>
-                                </div>
-                                <div class="text-nowrap">
-                                    <span class="badge bg-info text-white">Active</span>
-                                    <span class="ms-1 text-white font-size-13">Since last week</span>
-                                </div>
-                            </div><!-- end card body -->
+                                </div><!-- end card body -->
+                            </a>
                         </div><!-- end card -->
                     </div><!-- end col -->
                 </div><!-- end row-->
