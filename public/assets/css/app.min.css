@@ -1710,7 +1710,10 @@ body[data-layout-mode='dark'] .accordion-collapse {
   transition: transform 0.5s;
 }
 
-.card-body:hover {
+.style1:hover,
+.style2:hover,
+.style3:hover,
+.style4:hover {
   transform: scale(1.03);
 }
 

@@ -52,7 +52,7 @@
                 <li>
                     <a href="daftarpengunjung">
                         <i data-feather="list"></i>
-                        <span data-key="t-horizontal"><?= lang('Files.dftrpengunjung'); ?></span>
+                        <span data-key="t-horizontal"><?= lang('Files.daftarpengunjung'); ?></span>
                     </a>
                 </li>
 

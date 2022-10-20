@@ -28,10 +28,18 @@ class DataWeb extends BaseController
         $aturan = [
             'nama' => [
                 'label' => 'Nama',
-                'rules' => 'required|min_length[3]',
+                'rules' => 'required|min_length[5]',
                 'errors' => [
                     'required' => '{field} harus diisi',
                     'min_length' => 'Minimum karakter untuk field {field} adalah 5 karakter'
+                ]
+            ],
+            'domain' => [
+                'label' => 'domain',
+                'rules' => 'required|min_length[7]',
+                'errors' => [
+                    'required' => '{field} harus diisi',
+                    'min_length' => 'Minimum karakter untuk field {field} adalah 7 karakter'
                 ]
             ],
         ];

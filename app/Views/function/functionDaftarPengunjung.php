@@ -2,23 +2,23 @@
     function hapus($kode_link) {
         var result = confirm('Yakin mau melakukan proses delete');
         if (result) {
-            window.location = "<?php echo site_url("Admin/dataweb/hapus") ?>/" + $kode_link;
+            window.location = "<?php echo site_url("Admin/daftarpengunjung/hapus") ?>/" + $kode_link;
         }
     }
 
     function edit($kode_link) {
         $.ajax({
-            url: "<?php echo site_url("Admin/dataweb/edit") ?>/" + $kode_link,
+            url: "<?php echo site_url("Admin/daftarpengunjung/edit") ?>/" + $kode_link,
             type: "get",
             success: function(hasil) {
                 var $obj = $.parseJSON(hasil);
                 if ($obj.kode_link != '') {
                     $('#kode_link').val($obj.kode_link);
                     $('#inputNama').val($obj.nama);
-                    $('#inputDomain').val($obj.domain);
-                    $('#inputIp').val($obj.ip);
+                    $('#inputInstansi').val($obj.instansi);
+                    $('#inputKeperluan').val($obj.keperluan);
+                    $('#inputFoto').val($obj.foto);
                     $('#inputTanggal').val($obj.tanggal);
-                    $('#inputStatus').val($obj.status);
                 }
             }
 
@@ -28,10 +28,10 @@
     function bersihkan() {
         $('#kode_link').val('');
         $('#inputNama').val('');
-        $('#inputDomain').val('');
-        $('#inputIp').val('');
+        $('#inputInstansi').val('');
+        $('#inputKeperluan').val('');
+        $('#inputFoto').val('');
         $('#inputTanggal').val('');
-        $('#inputStatus').val('');
     }
     $('.tombol-tutup').on('click', function() {
         if ($('.sukses').is(":visible")) {
@@ -44,10 +44,10 @@
     $('#tombolSimpan').on('click', function() {
         var $kode_link = $('#kode_link').val();
         var $nama = $('#inputNama').val();
-        var $domain = $('#inputDomain').val();
-        var $ip = $('#inputIp').val();
+        var $instansi = $('#inputInstansi').val();
+        var $keperluan = $('#inputKeperluan').val();
+        var $foto = $('#inputFoto').val();
         var $tanggal = $('#inputTanggal').val();
-        var $status = $('#inputStatus').val();
 
 
         $.ajax({
@@ -56,10 +56,11 @@
             data: {
                 kode_link: $kode_link,
                 nama: $nama,
-                domain: $domain,
-                ip: $ip,
+                instansi: $instansi,
+                foto: $foto,
+                keperluan: $keperluan,
+                footo: $foto,
                 tanggal: $tanggal,
-                status: $status
             },
             success: function(hasil) {
                 var $obj = $.parseJSON(hasil);

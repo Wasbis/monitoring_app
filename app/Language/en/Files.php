@@ -13,7 +13,7 @@ return [
     "KelolaData" => "Kelola Data",
     "web" => "Kelola Data Web",
     "pratinjau" => "Pratinjau Web",
-    "dftrpengunjung" =>"Daftar Pengunjung",
+    "daftarpengunjung" =>"Daftar Pengunjung",
     "Extra" => "additions",
     "Detail" => "Kelola Data Detail",
     "Akun" => "Kelola Akun",

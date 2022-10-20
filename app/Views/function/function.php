@@ -15,8 +15,12 @@ $ip         = "";
 $nama       = "";
 $status     = "";
 $tanggal    = "";
+$foto       = "";
+$keperluan  = "";
+$instansi   = "";
 $sukses     = "";
 $error      = "";
+
 
 if (isset($_GET['op'])) {
     $op = $_GET['op'];
@@ -45,6 +49,9 @@ if ($op == 'edit') {
     $nama       = $r1['nama'];
     $status     = $r1['status'];
     $tanggal    = $r1['tanggal'];
+    $instansi   = $r1['instansi'];
+    $foto       = $r1['foto'];
+    $keperluan  = $r1['keperluan'];
 
     if ($domain == '') {
         $error = "Data tidak ditemukan";
@@ -57,6 +64,10 @@ if (isset($_POST['simpan'])) { //untuk create
     $nama           = $_POST['nama'];
     $status         = $_POST['status'];
     $tanggal        = $_POST['tanggal'];
+    $instansi       = $_POST['instansi'];
+    $foto           = $_POST['foto'];
+    $keperluan      = $_POST['keperluan'];
+
 
     if ($domain && $ip && $nama && $status && $tanggal) {
         if ($op == 'edit') { //untuk update
@@ -69,6 +80,29 @@ if (isset($_POST['simpan'])) { //untuk create
             }
         } else { //untuk insert
             $sql1   = "insert into link(domain,ip,nama,status,tanggal) values ('$domain','$ip','$nama','$status','$tanggal')";
+            $q1     = mysqli_query($koneksi, $sql1);
+            if ($q1) {
+                $sukses     = "Berhasil memasukkan data baru";
+            } else {
+                $error      = "Gagal memasukkan data";
+            }
+        }
+    } else {
+        $error = "Silakan masukkan semua data";
+    }
+
+    // daftarpengunjung
+    if ($nama && $instansi && $keperluan && $foto && $tanggal) {
+        if ($op == 'edit') { //untuk update
+            $sql1       = "update link set nama = '$nama',instansi='$instansi',keperluan = '$keperluan',foto='$foto',tanggal='$tanggal' where kode_link = '$kode_link'";
+            $q1         = mysqli_query($koneksi, $sql1);
+            if ($q1) {
+                $sukses = "Data berhasil diupdate";
+            } else {
+                $error  = "Data gagal diupdate";
+            }
+        } else { //untuk insert
+            $sql1   = "insert into link(nama,instansi,keperluan,foto,tanggal) values ('$nama','$instansi','$keperluan','$foto','$tanggal')";
             $q1     = mysqli_query($koneksi, $sql1);
             if ($q1) {
                 $sukses     = "Berhasil memasukkan data baru";

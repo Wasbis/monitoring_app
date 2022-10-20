@@ -54,7 +54,7 @@
                 <div class="row align-items-center">
                     <div class="col-md-6">
                         <div class="mb-3">
-                            <h5 class="card-title">Daftar Pengunjung List<span class="text-muted fw-normal ms-2"></span></h5>
+                            <h5 class="card-title"><span class="text-muted fw-normal ms-2"></span></h5>
                         </div>
                         
                     </div>
@@ -97,12 +97,18 @@
                                                     <input type="text" class="form-control" id="inputNama" aria-describedby="NameHelp" />
                                                 </div>
                                                 <div class="mb-3">
-                                                    <label for="inputDomain" class="form-label"> Nama Instansi / Jabatan </label>
-                                                    <input type="text" class="form-control" id="inputDomain" aria-describedby="NameHelp" />
+                                                    <label for="inputInstansi" class="form-label"> Nama Instansi / Jabatan </label>
+                                                    <input type="text" class="form-control" id="inputInstansi" aria-describedby="NameHelp" />
                                                 </div>
                                                 <div class="mb-3">
-                                                    <label for="inputDomain" class="form-label"> Keperluan </label>
-                                                    <input type="text" class="form-control" id="inputDomain" aria-describedby="NameHelp" />
+                                                    <label for="inputKeperluan" class="form-label"> Keperluan </label>
+                                                    <input type="text" class="form-control" id="inputKeperluan" aria-describedby="NameHelp" />
+                                                </div>
+                                                <div class="mb-3">
+                                                    <label for="inputTanggal" class="form-label">
+                                                        Tanggal
+                                                    </label>
+                                                    <input type="date" class="form-control" id="inputTanggal" aria-describedby="NameHelp">
                                                 </div>
                                                 <div class="d-flex flex-column justify-content-center">
                                                     <video id="video" width="450px" height="240px" autoplay muted></video>
@@ -132,23 +138,23 @@
                                     <thead>
                                         <tr>
                                             <th scope="col" style="width: 5px;">No</th>
-                                            <th scope="col">Nama Web/Aplikasi</th>
-                                            <th scope="col">Nama Domain</th>
-                                            <th scope="col">IP</th>
-                                            <th scope="col">Tanggal</th>
-                                            <th scope="col">Status</th>
+                                            <th scope="col">Nama Pengunjung</th>
+                                            <th scope="col">Nama Instansi / Jabatan</th>
+                                            <th scope="col">Keperluan</th>
+                                            <th scope="col">Foto</th>
                                             <th style="width: 20px; min-width: 20px;">Action</th>
                                             
                                         </tr>
                                     </thead>
                                     <tbody>
-                                        <?php $i = 1; ?>
+                                        <?php $i = 1;?>
                                         <?php foreach ($web as $we) : ?>
                                             <tr>
                                                 <th scope="row"><?= $i++; ?></th>
                                                 <td><?= $we['nama']; ?></td>
-                                                <td><?= $we['domain']; ?></td>
-                                                <td><?= $we['ip']; ?></td>
+                                                <td><?= $we['instansi']; ?></td>
+                                                <td><?= $we['keperluan']; ?></td>
+                                                <td><?= $we['foto']; ?></td>
                                                 <td><?= $we['tanggal']; ?></td>
                                                 <td>
                                                     <div class="d-flex gap-2" style="font-size: 16px;">
@@ -160,6 +166,10 @@
                                                         <button class="btn btn-link font-size-20 shadow-none py-0 text-muted dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
                                                             <i class="bx bx-dots-horizontal-rounded"></i>
                                                         </button>
+                                                        <ul class="dropdown-menu dropdown-menu-end">
+                                                            <!-- <li><a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target="#exampleModal" onclick="edit(<?php echo $we['kode_link']; ?>)">Edit</a></li> -->
+                                                            <li><a class="dropdown-item" href="#" onclick="hapus(<?php echo $we['kode_link'] ?>)">Delete</a></li>
+                                                        </ul>
                                                     </div>
                                                 </td>
                                             </tr>
