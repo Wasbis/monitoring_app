@@ -50,11 +50,17 @@
                     </a>
                 </li>
                 <li>
+                    <a href="logactivity">
+                        <i data-feather="list"></i>
+                        <span data-key="t-horizontal"><?= lang('Files.logac'); ?></span>
+                    </a>
+                </li>
+                <!-- <li>
                     <a href="daftarpengunjung">
                         <i data-feather="list"></i>
                         <span data-key="t-horizontal"><?= lang('Files.daftarpengunjung'); ?></span>
                     </a>
-                </li>
+                </li> -->
 
 
                 <!-- Aplikasi menu -->

@@ -8,6 +8,7 @@
 return [
     "menit" => "1 menit yang lalu.",
     "Admin" => "Admin",
+    "logac" => "Log Activity",
     "it_upport" => "IT Support",
     "Pesan" => "Selamat Pagi, <br> Semoga Hari mu Menyenangkan",
     "KelolaData" => "Kelola Data",

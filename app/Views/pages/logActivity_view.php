@@ -38,7 +38,7 @@
                 <div class="row">
                     <div class="col-12">
                         <div class="page-title-box d-sm-flex align-items-center justify-content-between">
-                            <h4 class="mb-sm-0 font-size-18">Isi Data</h4>
+                            <h4 class="mb-sm-0 font-size-18"></h4>
 
                             <div class="page-title-right">
                                 <ol class="breadcrumb m-0">
@@ -56,14 +56,13 @@
                         <div class="mb-3">
                             <h5 class="card-title"><span class="text-muted fw-normal ms-2"></span></h5>
                         </div>
-                        
                     </div>
                     <div class="col-md-6">
                         <div class="d-flex flex-wrap align-items-center justify-content-end gap-2 mb-3">
                             <div>
                                 <ul class="nav nav-pills">
                                     <li class="nav-item btn-custom">
-                                        <a class="nav-link" href="#" data-bs-toggle="tooltip" data-bs-placement="top" title="List"><i class="bx bx-list-ul" style="color: white;"></i></a>
+                                        <a class="nav-link " href="#" data-bs-toggle="tooltip" data-bs-placement="top" title="List"><i class="bx bx-list-ul" style="color:white"></i></a>
                                     </li>
                                     <li class="nav-item">
                                         <a class="nav-link" href="#" data-bs-toggle="tooltip" data-bs-placement="top" title="Grid"><i class="bx bx-grid-alt"></i></a>
@@ -71,8 +70,8 @@
                                 </ul>
                             </div>
                             <!-- BUTTON ADD -->
-                            <div class="btn">
-                                <a href="#" id="addnew" class="btn btn-custom " data-bs-toggle="modal" data-bs-target="#exampleModal"><i class="bx bx-plus me-1"></i> Add New</a>
+                            <div>
+                                <a href="#" class="btn btn-custom" data-bs-toggle="modal" data-bs-target="#exampleModal"><i class="bx bx-plus me-1"></i> Add New</a>
                             </div>
 
                             <!-- FORM MODAL INPUT DATA -->
@@ -91,29 +90,60 @@
                                             <div class="alert alert-primary sukses" role="alert" style="display: none">
                                             </div>
                                             <form>
-                                                <input type="hidden" id="kode_link">
+                                                <input type="hidden" id="">
                                                 <div class="mb-3">
-                                                    <label for="inputNama" class="form-label"> Nama Pengunjung </label>
-                                                    <input type="text" class="form-control" id="inputNama" aria-describedby="NameHelp" />
+                                                    <label for="inputIdTicket" class="form-label">
+                                                        ID Ticket
+                                                    </label>
+                                                    <input type="text" class="form-control" id="inputIdTicket" aria-describedby="NameHelp">
                                                 </div>
                                                 <div class="mb-3">
-                                                    <label for="inputInstansi" class="form-label"> Nama Instansi / Jabatan </label>
-                                                    <input type="text" class="form-control" id="inputInstansi" aria-describedby="NameHelp" />
+                                                    <label for="inputProblem" class="form-label">
+                                                        problem
+                                                    </label>
+                                                    <input type="text" class="form-control" id="inputProblem" aria-describedby="NameHelp">
                                                 </div>
                                                 <div class="mb-3">
-                                                    <label for="inputKeperluan" class="form-label"> Keperluan </label>
-                                                    <input type="text" class="form-control" id="inputKeperluan" aria-describedby="NameHelp" />
+                                                    <label for="inputNip" class="form-label">
+                                                        NIP / NIP3K / NIK
+                                                    </label>
+                                                    <input type="text" class="form-control" id="inputNip" aria-describedby="NameHelp">
+                                                </div>
+                                                <!-- <div class="mb-3">
+                                                    <label for="inputPic" class="form-label">
+                                                        PIC
+                                                    </label>
+                                                    <input type="text" class="form-control" id="inputPic" aria-describedby="NameHelp">
+                                                </div> -->
+                                            
+                                                <div class="mb-3">
+                                                    <label for="inputStatus" class="form-label">Status</label>
+                                                    <select id="inputStatus" class="form-select">
+                                                        <option value="To Do" id="#todo">To Do</option>
+                                                        <option value="Doing" id="#doing">Doing</option>
+                                                        <option value="Done" id="#done">Done</option>
+                                                        <option value="Pending" id="#pending">Pending</option>
+                                                    </select>
                                                 </div>
                                                 <div class="mb-3">
-                                                    <label for="inputTanggal" class="form-label">Tanggal </label>
+                                                    <label for="inputTanggal" class="form-label">
+                                                        Tanggal
+                                                    </label>
                                                     <input type="date" class="form-control" id="inputTanggal" aria-describedby="NameHelp">
                                                 </div>
-                                                <div class="d-flex flex-column justify-content-center">
-                                                    <video id="video" width="450px" height="240px"></video>
-                                                    <button class="btn btn-primary" type="button" id="snap">Take Foto</button>
-                                                    <canvas id="canvas" width="450px" height="240px"></canvas>
+                                                <div class="mb-3">
+                                                    <label for="inputTroubleshooting" class="form-label">
+                                                        TroubleShooting
+                                                    </label>
+                                                    <input type="text" class="form-control" id="inputTroubleshooting" aria-describedby="NameHelp">
                                                 </div>
-                                                </form>
+                                                <!-- <div class="mb-3">
+                                                    <label for="inputTroubleshooting" class="form-label">
+                                                        Foto
+                                                    </label>
+                                                    <input type="canvas" class="form-control" id="inputFoto" aria-describedby="NameHelp">
+                                                </div> -->
+                                            </form>
                                         </div>
                                         <div class="modal-footer">
                                             <button type="button" class="btn btn-secondary tombol-tutup" data-bs-dismiss="modal">Tutup</button>
@@ -131,41 +161,51 @@
                         <!-- FORM TAMPIL DATA WEB -->
                         <div class="card">
                             <div class="card-body">
-                                <h4 class="text-muted" >Visitor List</h4>
+                                <h4 class="text-secondary" >Log Activity</h4>
                                 <table id="datatable-buttons" class="table table-bordered dt-responsive nowrap w-100">
                                     <thead>
                                         <tr>
                                             <th scope="col" style="width: 5px;">No</th>
-                                            <th scope="col">Nama Pengunjung</th>
-                                            <th scope="col">Nama Instansi / Jabatan</th>
-                                            <th scope="col">Keperluan</th>
-                                            <th scope="col">Foto</th>
+                                            <th scope="col">id_ticket</th>
+                                            <th scope="col">Problem</th>
+                                            <th scope="col">PIC</th>
+                                            <th scope="col">Status</th>
                                             <th scope="col">Tanggal</th>
+                                            <th scope="col">Troubleshooting</th>
+                                            <th scope="col">Foto</th>
+                                            <!-- <th scope="col">Foto</th> -->
                                             <th style="width: 20px; min-width: 20px;">Action</th>
                                             
                                         </tr>
                                     </thead>
                                     <tbody>
-                                        <?php $i = 1;?>
+                                        <?php $i = 1; ?>
                                         <?php foreach ($web as $we) : ?>
                                             <tr>
                                                 <th scope="row"><?= $i++; ?></th>
-                                                <td><?= $we['nama']; ?></td>
-                                                <td><?= $we['instansi']; ?></td>
-                                                <td><?= $we['keperluan']; ?></td>
-                                                <td><?= $we['foto']; ?></td>
-                                                <td><?= $we['tanggal']; ?></td>
+                                                <td><?= $we['id_ticket']; ?></td>
+                                                <td><?= $we['problem']; ?></td>
+                                                <td><?= $we['nip']; ?></td>
+                                                <td><?= $we['pic']; ?></td>
+                                                <td>
+                                                    <div class="d-flex gap-2" style="font-size: 16px;">
+                                                        <a href="#" class="badge badge-soft-success"><?= $we['status']; ?></a>
+                                                    </div>
+                                                </td>                                                
                                                 <td>
                                                     <div class="dropdown">
                                                         <button class="btn btn-link font-size-20 shadow-none py-0 text-muted dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
                                                             <i class="bx bx-dots-horizontal-rounded"></i>
                                                         </button>
                                                         <ul class="dropdown-menu dropdown-menu-end">
-                                                            <!-- <li><a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target="#exampleModal" onclick="edit(<?php echo $we['kode_link']; ?>)">Edit</a></li> -->
-                                                            <li><a class="dropdown-item" href="#" onclick="hapus(<?php echo $we['kode_link'] ?>)">Delete</a></li>
+                                                            <li><a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target="#exampleModal" onclick="edit(<?php echo $we['id_log']; ?>)">Edit</a></li>
+                                                            <li><a class="dropdown-item" href="#" onclick="hapus(<?php echo $we['id_log'] ?>)">Delete</a></li>
                                                         </ul>
                                                     </div>
                                                 </td>
+                                                <td><?= $we['tanggal']; ?></td>
+                                                <td><?= $we['troubleshooting']; ?></td>
+                                                <td><?= $we['foto']; ?></td>
                                             </tr>
                                         <?php endforeach; ?>
                                         
@@ -211,7 +251,7 @@
 <script src="assets/js/pages/datatables.init.js"></script>
 
 <script src="assets/js/app.js"></script>
-<?= $this->include('function/functionDaftarPengunjung.php'); ?>
+<?= $this->include('function/functionLogactivity.php'); ?>
 </body>
 
 </html>

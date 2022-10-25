@@ -17,7 +17,7 @@
                     $('#inputNama').val($obj.nama);
                     $('#inputInstansi').val($obj.instansi);
                     $('#inputKeperluan').val($obj.keperluan);
-                    $('#inputFoto').val($obj.foto);
+                    $('#canvas').val($obj.foto);
                     $('#inputTanggal').val($obj.tanggal);
                 }
             }
@@ -30,7 +30,7 @@
         $('#inputNama').val('');
         $('#inputInstansi').val('');
         $('#inputKeperluan').val('');
-        $('#inputFoto').val('');
+        $('#canvas').val('');
         $('#inputTanggal').val('');
     }
     $('.tombol-tutup').on('click', function() {
@@ -39,6 +39,7 @@
         }
         $('.alert').hide();
         bersihkan();
+        
     });
 
     $('#tombolSimpan').on('click', function() {
@@ -46,7 +47,7 @@
         var $nama = $('#inputNama').val();
         var $instansi = $('#inputInstansi').val();
         var $keperluan = $('#inputKeperluan').val();
-        var $foto = $('#inputFoto').val();
+        var $foto = $('#snap').val();
         var $tanggal = $('#inputTanggal').val();
 
 
@@ -59,7 +60,7 @@
                 instansi: $instansi,
                 foto: $foto,
                 keperluan: $keperluan,
-                footo: $foto,
+                foto: $foto,
                 tanggal: $tanggal,
             },
             success: function(hasil) {
@@ -79,7 +80,7 @@
         
     });
     
-    
+    function foto() {
     let canvas = document.querySelector('#canvas');
     let contect = canvas.getContext('2d');
     let video = document.querySelector('#video');
@@ -88,16 +89,18 @@
         navigator.mediaDevices.getUserMedia({video: true}).then((stream) => {
         video.srcObject = stream;
         video.play();
+        });    
+        document.getElementById('snap').addEventListener('click', () => {
+        contect.drawImage(video, 60, 10, 315, 232);
+        video.srcObject = null;
         });
-    } else if (navigator.mediaDevices && navigator.mediaDevices.getUserMedia) {
-        navigator.mediaDevices.getUserMedia({video: false}).then((stop) => {
-        video.srcObject = stop;
-        video.stop();
-        });
-    }
-
-    document.getElementById('snap').addEventListener('click', () => {
-    contect.drawImage(video, 60, 10, 315, 232);
+        }else {
+            video.srcObject = null;
+            
+        };
+    };
+    
+    $('#addnew').on('click', function() {
+        foto();
     });
-
 </script>

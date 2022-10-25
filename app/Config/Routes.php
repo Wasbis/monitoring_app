@@ -164,6 +164,7 @@ $routes->get('/dataweb', 'Admin\DataWeb::index');
 $routes->get('/datakelola', 'Admin\DataKelola::index');
 $routes->get('/pratinjauweb', 'Admin\PratinjauWeb::index');
 $routes->get('/daftarpengunjung', 'Admin\daftarpengunjung::index');
+$routes->get('/logactivity', 'Admin\LogActivity::index');
 
 
 
